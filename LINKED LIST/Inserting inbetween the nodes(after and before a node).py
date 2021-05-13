@@ -56,11 +56,15 @@ class Linked_list:
             self.head=new_node
         else:
             while n is not None:
-                if n.ref.data==input:
+                if n.data==input:
                     new_node.ref=n.ref
                     n.ref=new_node
                     break
                 n=n.ref
+            if n is None:
+                print(input," Node is not found")
+
+
 l1=Linked_list()
 l1.add_at_begining("kalluri")
 l1.add_at_end("kumar")
@@ -69,7 +73,7 @@ l1.inbetween_after("siva","kalluri")
 l1.inbetween_after(" hello i am new node after the kumar node ","kumar")
 l1.inbetween_after("aaa","king")
 l1.inbetween_before("king before","reddy")
-l1.inbetween_before("hello before","siva")
+l1.inbetween_before("hello before","sivaa")
 l1.traverse()
 
 
